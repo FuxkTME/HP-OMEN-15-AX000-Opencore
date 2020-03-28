@@ -30,6 +30,14 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
+				<string>SSDT-ARTC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
 				<string>SSDT-BATT.aml</string>
 			</dict>
 			<dict>
@@ -1029,11 +1037,11 @@
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>15</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -1128,7 +1136,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-disablegfxfirmware -v -keepsyms</string>
+				<string>-disablegfxfirmware -abm_firstpolldelay=20000</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1228,7 +1236,6 @@
 		<key>Drivers</key>
 		<array>
 			<string>OpenRuntime.efi</string>
-			<string>MemoryAllocation.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>HFSPlus.efi</string>
 		</array>
@@ -1237,7 +1244,7 @@
 			<key>AudioSupport</key>
 			<false/>
 			<key>AudioDevice</key>
-			<string>PciRoot(0x0)/Pci(0x1f,0x3)</string>
+			<string></string>
 			<key>AudioCodec</key>
 			<integer>0</integer>
 			<key>AudioOut</key>
@@ -1247,7 +1254,7 @@
 			<key>PlayChime</key>
 			<false/>
 			<key>VolumeAmplifier</key>
-			<integer>20</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Input</key>
 		<dict>
@@ -1304,7 +1311,7 @@
 			<key>AppleKeyMap</key>
 			<false/>
 			<key>AppleSmcIo</key>
-			<false/>
+			<true/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
 			<key>DataHub</key>
@@ -1327,11 +1334,11 @@
 			<key>IgnoreInvalidFlexRatio</key>
 			<false/>
 			<key>ReleaseUsbOwnership</key>
-			<false/>
+			<true/>
 			<key>RequestBootVarFallback</key>
 			<false/>
 			<key>RequestBootVarRouting</key>
-			<false/>
+			<true/>
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
